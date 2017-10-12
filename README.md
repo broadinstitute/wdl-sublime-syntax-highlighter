@@ -4,7 +4,6 @@ This repo provides support for the [Workflow Development Language (WDL)](https:/
 
 Installation:
   * Install [Package Control](https://packagecontrol.io/) package manager for Sublime via [these instructions](https://packagecontrol.io/installation).
-  * Use `cmd-shift-p` on OSX or `ctrl-shift-p` on Linux to open Command Palette, then select `Package Control: Install Package`.
-  * Search for "WDL Syntax" and hit Enter. 
-
-
+  * Use <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on OSX or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Linux to open Command Palette, then select `Package Control: Install Package`.
+  * Search for "WDL Syntax" and hit <kbd>Enter</kbd>. 
+  
