@@ -72,7 +72,7 @@
 		<key>builtin_types</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.)\b(Array|Boolean|File|Float|Int|Map|Object|String|Uri)\b</string>
+			<string>(?&lt;!\.)\b(Array|Boolean|File|Float|Int|Map|Object|String|Pair)\b</string>
 			<key>name</key>
 			<string>support.type.wdl</string>
 		</dict>
@@ -205,7 +205,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\s*(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta)\s+</string>
+					<string>\s*(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)\s+</string>
 					<key>name</key>
 					<string>keyword.other.wdl</string>
 				</dict>

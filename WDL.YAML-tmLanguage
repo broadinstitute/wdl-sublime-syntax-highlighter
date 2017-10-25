@@ -35,7 +35,7 @@ patterns:
 repository:
   builtin_types:
     name: support.type.wdl
-    match: (?<!\.)\b(Array|Boolean|File|Float|Int|Map|Object|String|Uri)\b
+    match: (?<!\.)\b(Array|Boolean|File|Float|Int|Map|Object|String|Pair)\b
 
   comments:
     patterns:
@@ -75,7 +75,7 @@ repository:
   keywords:
     patterns:
     - name: keyword.other.wdl
-      match: \s*(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta)\s+
+      match: \s*(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)\s+
 
   string_quoted_double:
     patterns:
