@@ -233,7 +233,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\s*(call|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)\s+</string>
+					<string>(^|\s)(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]</string>
 					<key>name</key>
 					<string>keyword.other.wdl</string>
 				</dict>
