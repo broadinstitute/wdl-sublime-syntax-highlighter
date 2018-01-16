@@ -86,7 +86,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(command)\s\{\n</string>
+					<string>(command)\s*\{\n</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -233,7 +233,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(^|\s)(call|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]</string>
+					<string>\s*(call|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)\s+</string>
 					<key>name</key>
 					<string>keyword.other.wdl</string>
 				</dict>

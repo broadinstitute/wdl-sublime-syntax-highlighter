@@ -113,7 +113,7 @@ repository:
     patterns:
     - comment: command block
       name: command.block.wdl
-      begin: (command)\s\{\n
+      begin: (command)\s*\{\n
       beginCaptures:
         '1': {name: keyword.other.wdl}
       end: (^|\s+)\}
