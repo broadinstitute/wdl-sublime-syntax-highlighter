@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>author</key>
@@ -66,10 +66,6 @@
 			<key>include</key>
 			<string>#string_quoted_double</string>
 		</dict>
-		<dict>
-			<key>include</key>
-			<string>#command_block</string>
-		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -79,30 +75,6 @@
 			<string>(?&lt;!\.)\b(Array|Boolean|File|Float|Int|Map|Object|String|Pair)\b</string>
 			<key>name</key>
 			<string>support.type.wdl</string>
-		</dict>
-		<key>command_block</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>(command)\s*\{\n</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.wdl</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>command block</string>
-					<key>end</key>
-					<string>(^|\s+)\}</string>
-					<key>name</key>
-					<string>command.block.wdl</string>
-				</dict>
-			</array>
 		</dict>
 		<key>comments</key>
 		<dict>

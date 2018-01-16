@@ -32,8 +32,6 @@ patterns:
 
 - include: '#string_quoted_double'
 
-- include: '#command_block'
-
 repository:
   builtin_types:
     name: support.type.wdl
@@ -79,7 +77,6 @@ repository:
     - name: keyword.other.wdl
       match: (^|\s)(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]
 
-
   string_quoted_double:
     patterns:
     - comment: double quoted string
@@ -109,14 +106,4 @@ repository:
       patterns:
       - include: '#constant_placeholder'
       - include: '#escaped_char'
-
-  command_block:
-    patterns:
-    - comment: command block
-      name: command.block.wdl
-      begin: (command)\s*\{\n
-      beginCaptures:
-        '1': {name: keyword.other.wdl}
-      end: (^|\s+)\}
-
 author: Andrew Teixeira <teixeira@broadinstitute.org>
