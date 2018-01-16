@@ -77,8 +77,7 @@ repository:
   keywords:
     patterns:
     - name: keyword.other.wdl
-      match: (^|\s)(call|command|output|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]
-
+      match: (^|\s)(call|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]
 
   string_quoted_double:
     patterns:
