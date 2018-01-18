@@ -20,7 +20,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>&lt;\=|&gt;\=|\=\=|&lt;|&gt;|\!\=</string>
+			<string>&lt;\=|&gt;\=|\=\=|&lt;{1}|&gt;{1}|\!\=</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.wdl</string>
 		</dict>
@@ -32,7 +32,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+|\-|\*|\*\*|/|//|%|&lt;&lt;|&gt;&gt;|&amp;|\||\^|~</string>
+			<string>\+|\-|\*|\*\*|/|//|%|&lt;{2}|&gt;{2}|&amp;|\||\^|~</string>
 			<key>name</key>
 			<string>keyword.operator.arithmetic.wdl</string>
 		</dict>
@@ -86,7 +86,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(command)\s*\{\n</string>
+					<string>(command)\s*(\{|&lt;{3})\n</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -98,7 +98,7 @@
 					<key>comment</key>
 					<string>command block</string>
 					<key>end</key>
-					<string>(^|\s+)\}</string>
+					<string>(^|\s+)(\}|&gt;{3})</string>
 					<key>name</key>
 					<string>command.block.wdl</string>
 				</dict>

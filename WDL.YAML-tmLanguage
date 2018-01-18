@@ -9,13 +9,13 @@ patterns:
   match: \=
 
 - name: keyword.operator.comparison.wdl
-  match: <\=|>\=|\=\=|<|>|\!\=
+  match: <\=|>\=|\=\=|<{1}|>{1}|\!\=
 
 - name: keyword.operator.assignment.augmented.wdl
   match: \+\=|-\=|\*\=|/\=|//\=|%\=|&\=|\|\=|\^\=|>>\=|<<\=|\*\*\=
 
 - name: keyword.operator.arithmetic.wdl
-  match: \+|\-|\*|\*\*|/|//|%|<<|>>|&|\||\^|~
+  match: \+|\-|\*|\*\*|/|//|%|<{2}|>{2}|&|\||\^|~
 
 - name: constant.language.wdl
   match: \b(true|false)\b
@@ -79,6 +79,7 @@ repository:
     - name: keyword.other.wdl
       match: (^|\s)(call|runtime|task|workflow|if|then|else|import|as|input|output|meta|parameter_meta|scatter)[^A-Za-z_]
 
+
   string_quoted_double:
     patterns:
     - comment: double quoted string
@@ -113,9 +114,9 @@ repository:
     patterns:
     - comment: command block
       name: command.block.wdl
-      begin: (command)\s*\{\n
+      begin: (command)\s*(\{|<{3})\n
       beginCaptures:
         '1': {name: keyword.other.wdl}
-      end: (^|\s+)\}
+      end: (^|\s+)(\}|>{3})
 
 author: Andrew Teixeira <teixeira@broadinstitute.org>
