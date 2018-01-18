@@ -1,0 +1,35 @@
+{
+    "name": "wdl",
+    "displayName": "WDL Syntax Highlighter",
+    "description": "Official Syntax Highlighter for the Workflow Description Language",
+    "publisher": "broadinstitute",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.19.2"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "wdl",
+                "aliases": [
+                    "WDL",
+                    "wdl"
+                ],
+                "extensions": [
+                    ".wdl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "wdl",
+                "scopeName": "source.wdl",
+                "path": "./WDL.tmLanguage"
+            }
+        ]
+    }
+}
