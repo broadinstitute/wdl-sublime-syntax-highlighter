@@ -86,7 +86,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(command)\s*\{\n</string>
+					<string>(command)\s*\{(\n|\s)*</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -96,9 +96,27 @@
 						</dict>
 					</dict>
 					<key>comment</key>
-					<string>command block</string>
+					<string>command {}</string>
 					<key>end</key>
 					<string>(^|\s+)\}</string>
+					<key>name</key>
+					<string>command.block.wdl</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(command)\s*&lt;{3}(\n|\s)*</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.other.wdl</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>command &lt;&lt;&lt; &gt;&gt;&gt;</string>
+					<key>end</key>
+					<string>(^|\s+)&gt;{3}</string>
 					<key>name</key>
 					<string>command.block.wdl</string>
 				</dict>
