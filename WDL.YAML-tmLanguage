@@ -112,11 +112,17 @@ repository:
 
   command_block:
     patterns:
-    - comment: command block
+    - comment: command {}
       name: command.block.wdl
-      begin: (command)\s*(\{|<{3})\n
+      begin: (command)\s*\{(\n|\s)*
       beginCaptures:
         '1': {name: keyword.other.wdl}
-      end: (^|\s+)(\}|>{3})
+      end: (^|\s+)\}
+    - comment: command <<< >>> 
+      name: command.block.wdl
+      begin: (command)\s*<{3}(\n|\s)*
+      beginCaptures:
+        '1': {name: keyword.other.wdl}
+      end: (^|\s+)>{3}
 
 author: Andrew Teixeira <teixeira@broadinstitute.org>
