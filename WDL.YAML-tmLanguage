@@ -9,13 +9,13 @@ patterns:
   match: \=
 
 - name: keyword.operator.comparison.wdl
-  match: <\=|>\=|\=\=|<{1}|>{1}|\!\=
+  match: <\=|>\=|\=\=|<|>|\!\=
 
 - name: keyword.operator.assignment.augmented.wdl
   match: \+\=|-\=|\*\=|/\=|//\=|%\=|&\=|\|\=|\^\=|>>\=|<<\=|\*\*\=
 
 - name: keyword.operator.arithmetic.wdl
-  match: \+|\-|\*|\*\*|/|//|%|<{2}|>{2}|&|\||\^|~
+  match: \+|\-|\*|\*\*|/|//|%|<|>|&|\||\^|~
 
 - name: constant.language.wdl
   match: \b(true|false)\b
