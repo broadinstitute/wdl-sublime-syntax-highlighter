@@ -15,7 +15,7 @@ patterns:
   match: \+\=|-\=|\*\=|/\=|//\=|%\=|&\=|\|\=|\^\=|>>\=|<<\=|\*\*\=
 
 - name: keyword.operator.arithmetic.wdl
-  match: \+|\-|\*|\*\*|/|//|%|<|>|&|\||\^|~
+  match: \+|\-|\*|\*\*|/|//|%|<<|>>|&|\||\^|~
 
 - name: constant.language.wdl
   match: \b(true|false)\b

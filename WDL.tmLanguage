@@ -32,7 +32,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+|\-|\*|\*\*|/|//|%|&lt;|&gt;|&amp;|\||\^|~</string>
+			<string>\+|\-|\*|\*\*|/|//|%|&lt;&lt;|&gt;&gt;|&amp;|\||\^|~</string>
 			<key>name</key>
 			<string>keyword.operator.arithmetic.wdl</string>
 		</dict>
