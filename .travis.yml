@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - node
+before_install:
+  - npm i -g vsce
+install:
+  - |
+    cd vscode
+    cp ../WDL.tmLanguage .
+    cp ../README.md .
+    vsce publish -p ${VSTS_TOKEN} patch
+    rm WDL.tmLanguage
+    rm README.md
