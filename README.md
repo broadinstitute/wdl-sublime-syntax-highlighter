@@ -12,3 +12,7 @@ This repo provides support for the [Workflow Description Language (WDL)](https:/
  #### Visual Studio Code:
  * Go to Extensions, search for WDL Syntax Highlighter and install!
  
+### Converting WDL.tmLanguage (TextMate) to ACE Editor
+Follow steps here [Importing .tmltheme and .tmlanguage Files into Ace](https://github.com/ajaxorg/ace/wiki/Importing-.tmtheme-and-.tmlanguage-Files-into-Ace#importing-textmatesublime-languages)
+
+Note that the conversion is not always perfect. For example, TextMate uses Javascript which does not support look behinds. This must be fixed for the builtin_types lookbehind.
